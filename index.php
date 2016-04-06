@@ -236,7 +236,7 @@ switch (ENVIRONMENT)
 	define('SYSDIR', basename(BASEPATH));
 
     // whale 注入
-    require_once(SYSDIR . DIRECTORY_SEPARATOR . 'whale.php');
+    require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'whale.php');
 
 	// The path to the "application" directory
 	if (is_dir($application_folder))
