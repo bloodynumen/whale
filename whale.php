@@ -12,7 +12,7 @@ class Whale
                 return false;
             }
         }
-        $this->setApp();
+        self::setApp();
         return true;
     }
 
