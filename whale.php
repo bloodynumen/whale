@@ -5,7 +5,7 @@ class Whale
     public static function validUri()
     {
         if (!self::isCli()) {
-            $uri = $SERVER['REQUEST_URI'];
+            $uri = $_SERVER['REQUEST_URI'];
             if ($uri == '/' || $uri == '') {
                 return false;
             }
