@@ -237,8 +237,10 @@ switch (ENVIRONMENT)
 
     // whale 注入
     require_once(dirname(__FILE__) . DIRECTORY_SEPARATOR . 'whale.php');
-    if (Whale::validUri()) {
+    if (!Whale::validUri()) {
         Whale::redirect();
+    } else {
+        $application_folder = Whale::getApp();
     }
 
     // The path to the "application" directory
