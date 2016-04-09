@@ -3,6 +3,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Whale
 {
     private static $app = '';
+    private static $appsDir = 'apps';
 
     public static function validUri()
     {
@@ -37,5 +38,10 @@ class Whale
     public static function getApp()
     {
         return self::$app;
+    }
+
+    public static function getAppDir()
+    {
+        return self::$appsDir . DIRECTORY_SEPARATOR . self::$app;
     }
 }
