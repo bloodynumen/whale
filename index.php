@@ -240,7 +240,7 @@ switch (ENVIRONMENT)
     if (!Whale::validUri()) {
         Whale::redirect();
     } else {
-        $application_folder = Whale::getApp();
+        $application_folder = Whale::getAppDir();
     }
 
     // The path to the "application" directory
