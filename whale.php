@@ -44,4 +44,13 @@ class Whale
     {
         return self::$appsDir . DIRECTORY_SEPARATOR . self::$app;
     }
+
+    public static function removeAppUri($uri = '')
+    {
+        if (!$uri) {
+            return $uri;
+        }
+
+        return ltrim($uri, self::$app);
+    }
 }

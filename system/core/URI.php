@@ -240,7 +240,8 @@ class CI_URI {
 		}
 
 		// Do some final cleaning of the URI and return it
-		return $this->_remove_relative_directory($uri);
+		$uri = $this->_remove_relative_directory($uri);
+        return Whale::removeAppUri($uri);
 	}
 
 	// --------------------------------------------------------------------
