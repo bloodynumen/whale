@@ -23,6 +23,7 @@ class WhaleController extends CI_Controller
                 'power' => array(),
             ),
             'page' => array(
+                'site' => 'Whale',
                 'title' => '',
                 'url' => '',
             ),
