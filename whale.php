@@ -67,4 +67,9 @@ class Whale
 
 		return array_slice($args, 1);
     }
+
+    public static function importController($args = [])
+    {
+        require_once PCPATH.'/apps/whale/core/WhaleController.php';
+    }
 }
