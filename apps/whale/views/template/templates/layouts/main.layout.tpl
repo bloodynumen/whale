@@ -10,7 +10,7 @@
         <link rel="stylesheet" href="/whale/static/css/sb-admin.css" />
         <link rel="stylesheet" href="/whale/static/css/whale.css?v=8899" />
         <link rel="stylesheet" href="/whale/static/css/jquery-ui-1.10.0.custom.css?v=2" />
-        <script src="/whale/static/js/require.js"></script>
+        <script src="/whale/static/js/require.min.js"></script>
         <script src="/whale/static/js/require.init.js?v=1"></script>
         {{/block}}
     </head>
