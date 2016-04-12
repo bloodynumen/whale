@@ -17,6 +17,19 @@ class WhaleController extends CI_Controller
     {
         $this->_common = array(
             'nav' => array(
+                array(
+                    'name' => '接口测试',
+                    'channel_list' => array(
+                        array(
+                            'link' => '/juhe/api/config',
+                            'name' => '配置接口',
+                        ),
+                        array(
+                            'link' => '/juhe/api/report',
+                            'name' => '上报接口',
+                        ),
+                    ),
+                ),
             ),
             'user' => array(
                 'name' => 'admin',
