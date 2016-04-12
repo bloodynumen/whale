@@ -285,6 +285,7 @@ class CI_URI {
 	protected function _parse_argv()
 	{
 		$args = array_slice($_SERVER['argv'], 1);
+        $args = Whale::removeAppArg($args);
 		return $args ? implode('/', $args) : '';
 	}
 

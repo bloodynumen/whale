@@ -7,7 +7,7 @@ class Whale
 
     public static function validUri()
     {
-        if (!self::isCli()) {
+        if (self::isCli() == false) {
             $uri = $_SERVER['REQUEST_URI'];
             if ($uri == '/' || $uri == '') {
                 return false;
@@ -30,9 +30,14 @@ class Whale
 
     private static function setApp()
     {
-        $uri = trim($_SERVER['REQUEST_URI'], '/');
-        $queryData = explode('/', $uri);
-        self::$app = current($queryData);
+        if (self::isCli() == false) {
+            $uri = trim($_SERVER['REQUEST_URI'], '/');
+            $queryData = explode('/', $uri);
+            self::$app = current($queryData);
+        } else {
+            $argv = $_SERVER['argv'];
+            self::$app = $argv[1];
+        }
     }
 
     public static function getApp()
@@ -52,5 +57,14 @@ class Whale
         }
 
         return ltrim($uri, self::$app);
+    }
+
+    public static function removeAppArg($args = [])
+    {
+        if (!$args || count($args) == 1) {
+            return $args;
+        }
+
+		return array_slice($args, 1);
     }
 }
