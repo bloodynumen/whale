@@ -1,1 +1,1 @@
-{{$_common.user.name}}
+<(extends file="layouts/main.layout.tpl")>
