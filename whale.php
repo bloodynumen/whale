@@ -72,4 +72,9 @@ class Whale
     {
         require_once FCPATH.'/apps/whale/core/WhaleController.php';
     }
+
+    public static function getOwnPath()
+    {
+        return FCPATH . '/apps/whale/';
+    }
 }

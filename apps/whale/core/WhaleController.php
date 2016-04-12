@@ -26,6 +26,11 @@ class WhaleController extends CI_Controller
                 'title' => '',
                 'url' => '',
             ),
+            'tpl' => array(
+                'whale' => array(
+                    'layout' => Whale::getOwnPath() . '/views/template/layouts/main.layout.tpl',
+                ),
+            ),
         );
     }
 
