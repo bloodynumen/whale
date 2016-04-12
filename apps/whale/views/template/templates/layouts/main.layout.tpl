@@ -4,14 +4,14 @@
         {{block name="head"}}
         <meta charset="utf-8"/>
         <title>百度音乐-MIS平台 {{block name="title"}}{{/block}}</title>
-        <link rel="shortcut icon" href="/base/static/images/favicon.ico"/>
-        <link rel="stylesheet" href="/base/static/css/bootstrap.min.css" />
-        <link rel="stylesheet" href="/base/static/css/font-awesome.css" />
-        <link rel="stylesheet" href="/base/static/css/sb-admin.css" />
-        <link rel="stylesheet" href="/base/static/css/base.css?v=8899" />
-        <link rel="stylesheet" href="/base/static/css/jquery-ui-1.10.0.custom.css?v=2" />
-        <script src="/base/static/js/require.js"></script>
-        <script src="/base/static/js/require.init.js?v=1"></script>
+        <link rel="shortcut icon" href="/whale/static/images/favicon.ico"/>
+        <link rel="stylesheet" href="/whale/static/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="/whale/static/css/font-awesome.css" />
+        <link rel="stylesheet" href="/whale/static/css/sb-admin.css" />
+        <link rel="stylesheet" href="/whale/static/css/whale.css?v=8899" />
+        <link rel="stylesheet" href="/whale/static/css/jquery-ui-1.10.0.custom.css?v=2" />
+        <script src="/whale/static/js/require.js"></script>
+        <script src="/whale/static/js/require.init.js?v=1"></script>
         {{/block}}
     </head>
 
@@ -26,7 +26,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/base">Music Mis 平台 v1.4</a>
+                    <a class="navbar-brand" href="/whale">Music Mis 平台 v1.4</a>
                 </div>
                 <!-- /.navbar-header -->
 
@@ -40,7 +40,7 @@
                             <i class="fa fa-caret-down"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-user">
-                            <li><a href="/base/user/index/logout"><i class="fa fa-sign-out fa-fw"></i>退出</a>
+                            <li><a href="/whale/user/index/logout"><i class="fa fa-sign-out fa-fw"></i>退出</a>
                             </li>
                         </ul>
                         <!-- /.dropdown-user -->
