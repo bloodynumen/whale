@@ -1,1 +1,1 @@
-<(extends file="layouts/main.layout.tpl")>
+{{extends file="layouts/main.layout.tpl"}}
