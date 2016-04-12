@@ -1,1 +1,1 @@
-{{extends file="$_common.tpl.whale.layout"}}
+{{extends file="$_common['tpl']['whale']['layout']"}}
