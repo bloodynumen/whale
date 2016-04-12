@@ -102,7 +102,7 @@
                 <div class="container-fluid">
                     <p class="text-center">
                         <span class="label label-info">程序耗时:</span>
-                        <strong class="sec">{{$page.elapsed_time}}秒</strong>
+                        <strong class="sec">秒</strong>
                     </p>
                 </div>
             </div>
