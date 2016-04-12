@@ -1,24 +1,24 @@
 <!DOCTYPE html>
 <html lang="zh-cn">
     <head>
-        <(block name="head")>
+        {{block name="head"}}
         <meta charset="utf-8"/>
-        <title>百度音乐-MIS平台 <(block name="title")><(/block)></title>
+        <title>百度音乐-MIS平台 {{block name="title"}}{{/block}}</title>
         <link rel="shortcut icon" href="/base/static/images/favicon.ico"/>
         <link rel="stylesheet" href="/base/static/css/bootstrap.min.css" />
         <link rel="stylesheet" href="/base/static/css/font-awesome.css" />
         <link rel="stylesheet" href="/base/static/css/sb-admin.css" />
         <link rel="stylesheet" href="/base/static/css/base.css?v=8899" />
         <link rel="stylesheet" href="/base/static/css/jquery-ui-1.10.0.custom.css?v=2" />
-        <link rel="stylesheet" href="/<($page.app_uri)>/static/css/base.css?v=1000" />
+        <link rel="stylesheet" href="/{{$page.app_uri}}/static/css/base.css?v=1000" />
         <script src="/base/static/js/require.js"></script>
         <script src="/base/static/js/require.init.js?v=1"></script>
-        <(/block)>
+        {{/block}}
     </head>
 
     <body>
         <div id="wrapper">
-            <(block name="nav")>
+            {{block name="nav"}}
             <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
                 <div class="navbar-header">
                     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".sidebar-collapse">
@@ -35,9 +35,9 @@
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                             <i class="fa fa-user fa-fw"></i>
-                            <(if isset($page.user) )>
-                            <($page.user.name)>
-                            <(/if)>
+                            {{if isset($page.user) }}
+                            {{$page.user.name}}
+                            {{/if}}
                             <i class="fa fa-caret-down"></i>
                         </a>
                         <ul class="dropdown-menu dropdown-user">
@@ -65,23 +65,23 @@
                                 <!-- /input-group -->
                             </li>
 
-                            <(if isset($page.nav))>
-                            <(foreach $page.nav as $group)>
+                            {{if isset($page.nav)}}
+                            {{foreach $page.nav as $group}}
                             <li>
-                                <a class="mis-channel-group" href="#"><i class="fa fa-wrench fa-fw"></i> <($group.name)><span class="fa arrow"></span></a>
+                                <a class="mis-channel-group" href="#"><i class="fa fa-wrench fa-fw"></i> {{$group.name}}<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
-                                    <(if isset($group.channel_list))>
-                                    <(foreach $group.channel_list as $function)>
+                                    {{if isset($group.channel_list)}}
+                                    {{foreach $group.channel_list as $function}}
                                     <li>
-                                        <a href="<($function.link)>" <(if isset($function.target))>target="<($function.target)>"<(/if)>><($function.name)></a>
+                                        <a href="{{$function.link}}" {{if isset($function.target)}}target="{{$function.target}}"{{/if}}>{{$function.name}}</a>
                                     </li>
-                                    <(/foreach)>
-                                    <(/if)>
+                                    {{/foreach}}
+                                    {{/if}}
                                 </ul>
                                 <!-- /.nav-second-level -->
                             </li>
-                            <(/foreach)>
-                            <(/if)>
+                            {{/foreach}}
+                            {{/if}}
 
                         </ul>
                         <!-- /#side-menu -->
@@ -90,23 +90,23 @@
                 </div>
                 <!-- /.navbar-static-side -->
             </nav>
-            <(/block)>
+            {{/block}}
 
             <div id="page-wrapper">
-                <(block name="content")>
-                <(/block)>
+                {{block name="content"}}
+                {{/block}}
             </div>
 
-            <(block name="footer")>
+            {{block name="footer"}}
             <div id="footer">
                 <div class="container-fluid">
                     <p class="text-center">
                         <span class="label label-info">程序耗时:</span>
-                        <strong class="sec"><($page.elapsed_time)>秒</strong>
+                        <strong class="sec">{{$page.elapsed_time}}秒</strong>
                     </p>
                 </div>
             </div>
-            <(/block)>
+            {{/block}}
         </div>
     </body>
 </html>
