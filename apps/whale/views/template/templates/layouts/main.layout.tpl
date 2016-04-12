@@ -10,7 +10,6 @@
         <link rel="stylesheet" href="/base/static/css/sb-admin.css" />
         <link rel="stylesheet" href="/base/static/css/base.css?v=8899" />
         <link rel="stylesheet" href="/base/static/css/jquery-ui-1.10.0.custom.css?v=2" />
-        <link rel="stylesheet" href="/{{$page.app_uri}}/static/css/base.css?v=1000" />
         <script src="/base/static/js/require.js"></script>
         <script src="/base/static/js/require.init.js?v=1"></script>
         {{/block}}
@@ -35,8 +34,8 @@
                     <li class="dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                             <i class="fa fa-user fa-fw"></i>
-                            {{if isset($page.user) }}
-                            {{$page.user.name}}
+                            {{if isset($_common.user) }}
+                            {{$_common.user.name}}
                             {{/if}}
                             <i class="fa fa-caret-down"></i>
                         </a>
@@ -65,8 +64,8 @@
                                 <!-- /input-group -->
                             </li>
 
-                            {{if isset($page.nav)}}
-                            {{foreach $page.nav as $group}}
+                            {{if isset($_common.nav)}}
+                            {{foreach $_common.nav as $group}}
                             <li>
                                 <a class="mis-channel-group" href="#"><i class="fa fa-wrench fa-fw"></i> {{$group.name}}<span class="fa arrow"></span></a>
                                 <ul class="nav nav-second-level">
