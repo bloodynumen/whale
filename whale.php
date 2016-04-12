@@ -70,11 +70,11 @@ class Whale
 
     public static function importController($args = [])
     {
-        require_once FCPATH.'/apps/whale/core/WhaleController.php';
+        require_once FCPATH . 'apps/whale/core/WhaleController.php';
     }
 
     public static function getOwnPath()
     {
-        return FCPATH . '/apps/whale/';
+        return FCPATH . 'apps/whale/';
     }
 }
