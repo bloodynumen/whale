@@ -21,6 +21,10 @@ class WhaleController extends CI_Controller
                     'name' => '接口测试',
                     'channel_list' => array(
                         array(
+                            'link' => '/juhe/api/area',
+                            'name' => '配置接口-地域验证',
+                        ),
+                        array(
                             'link' => '/juhe/api/config',
                             'name' => '配置接口',
                         ),
