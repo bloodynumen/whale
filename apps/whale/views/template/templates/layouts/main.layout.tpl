@@ -24,7 +24,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="/whale">Music Mis 平台 v1.4</a>
+                    <a class="navbar-brand" href="/whale">Whale 平台 beta</a>
                 </div>
                 <!-- /.navbar-header -->
 
