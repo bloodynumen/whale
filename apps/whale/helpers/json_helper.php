@@ -3,7 +3,7 @@
 /**
     * @file json_helper.php
     * @brief 
-    * @author sunhuai(v_sunhuai@baidu.com)
+    * @author sunhuai
     * @version 
     * @date 2014/8/12 16:40:10
  */
@@ -13,10 +13,12 @@ if ( ! function_exists('output_json')) {
      * @brief 将数组转化为json格式,并输出json or jsonp
      */
 
-    function output_json($arr) {
+    function output_json($arr, $callback = false) {
         $CI = &get_instance();
         header('Content-type: application/json');
-        $callback = trim($CI->input->get('callback'));
+        if ($callback) {
+            $callback = trim($CI->input->get('callback'));
+        }
         if (!$callback){
             echo json_encode($arr);
             return;
