@@ -241,6 +241,7 @@ switch (ENVIRONMENT)
         Whale::redirect();
     } else {
         $application_folder = Whale::getAppDir();
+        WHALE_PATH = Whale::getOwnPath();
     }
 
     // The path to the "application" directory
