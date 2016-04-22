@@ -4,8 +4,7 @@
 <div class="content">
     <div class="jumbotron">
         <h1>Hello, world!</h1>
-        <p>...</p>
-        <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+        <p>欢迎来到 Whale</p>
     </div>
     {{if $list}}
     <ul>

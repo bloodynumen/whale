@@ -14,7 +14,7 @@
     </head>
 
     <body>
-        <div class="single-wrapper">
+        <div class="container single-wrapper">
             {{block name="content"}}
             {{/block}}
 
