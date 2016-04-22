@@ -1,3 +1,4 @@
+{{$_common.whale.layoutDir}}
 {{extends file="`$_common.whale.layoutDir`single.layout.tpl"}}
 {{block name="content"}}
 <div class="content">
