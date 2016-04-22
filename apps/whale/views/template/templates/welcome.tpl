@@ -1,4 +1,4 @@
-{{extends file=$_common.tpl.whale.layout}}
+{{extends file=`$_common.tpl.whale.layoutDir`single.layout.tpl}}
 {{block name="content"}}
 <div class="content">
     {{if $list}}

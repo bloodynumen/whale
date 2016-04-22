@@ -89,7 +89,7 @@
             </nav>
             {{/block}}
 
-            <div id="page-wrapper">
+            <div class="cms-wrapper">
                 {{block name="content"}}
                 {{/block}}
             </div>
