@@ -1,7 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Welcome extends WhaleController {
 
 	/**
 	 * Index Page for this controller.
@@ -20,7 +20,10 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-        $smarty = new Smarty();
-        var_dump($smarty);
+        $this->load->config('apps');
+        $list = $this->config->item('list', 'apps');
+
+        $this->template->assign('list', $list);
+        $this->template->display('welcome.tpl');
 	}
 }

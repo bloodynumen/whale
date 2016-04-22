@@ -1,7 +1,9 @@
 <?php
 $config['apps'] = array(
-    'test' => array(
-        'name' => '测试',
-        'desc' => '测试用',
-    ),
+    'list' => array(
+        'test' => array(
+            'name' => '测试',
+            'desc' => '测试用',
+        ),
+    )
 );
