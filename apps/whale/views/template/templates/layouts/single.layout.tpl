@@ -17,6 +17,11 @@
         <div class="single-wrapper">
             {{block name="content"}}
             {{/block}}
+
+            {{block name="footer"}}
+                <script src="/whale/static/js/require.min.js"></script>
+                <script src="/whale/static/js/require.init.js?v=1"></script>
+            {{/block}}
         </div>
     </body>
 </html>
