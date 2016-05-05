@@ -7,9 +7,9 @@
         <p>欢迎来到 Whale</p>
     </div>
     {{if $list}}
-    <ul class="row app-list">
+    <ul class="app-list">
         {{foreach $list as $short => $app}}
-        <li class="col-md-3"><a href="/{{$short}}/">{{$app.name}}</a></li>
+        <li><a href="/{{$short}}/">{{$app.name}}</a></li>
         {{/foreach}}
     </ul>
     {{/if}}

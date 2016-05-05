@@ -98,7 +98,7 @@ ul.app-list {
 }
 ul.app-list li {
     display: block;
-    width: 150px;
+    width: 25%;
     height: 150px;
     border: 1px solid red;
     border-radius: 150px;
