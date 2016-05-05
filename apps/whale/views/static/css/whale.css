@@ -94,14 +94,13 @@ body {
     margin: 0 20px 0 20px;
 }
 ul.app-list {
-    
+    padding: 0;
 }
 ul.app-list li {
     display: block;
+    float:left;
     width: 25%;
     height: 150px;
-    border: 1px solid red;
-    border-radius: 150px;
     text-align: center;
     line-height: 150px;
     font-size: 2em;
