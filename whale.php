@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 class Whale
 {
-    private static $app = '';
+    public static $app = '';
     private static $appsDir = 'apps';
 
     public static function validUri()
