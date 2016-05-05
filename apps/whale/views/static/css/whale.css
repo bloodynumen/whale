@@ -103,6 +103,10 @@ ul.app-list li {
     height: 150px;
     text-align: center;
     line-height: 150px;
-    font-size: 2em;
+    font-size: 1em;
     font-family: "微软雅黑";
+}
+
+ul.app-list li a:hover {
+    text-decoration: none;
 }
