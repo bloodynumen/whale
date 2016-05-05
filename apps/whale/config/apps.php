@@ -2,19 +2,19 @@
 $config['apps'] = array(
     'list' => array(
         'test' => array(
-            'name' => '测试',
+            'name' => 'app1',
             'desc' => '测试用',
         ),
         'juhe' => array(
-            'name' => '聚合',
+            'name' => 'app2',
             'desc' => '聚合',
         ),
         'whale' => array(
-            'name' => '测试',
+            'name' => 'app3',
             'desc' => '测试用',
         ),
         'sun' => array(
-            'name' => '阳光',
+            'name' => 'app4',
             'desc' => '测试用',
         ),
     )

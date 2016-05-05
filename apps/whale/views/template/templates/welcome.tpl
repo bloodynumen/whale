@@ -7,7 +7,7 @@
         <p>欢迎来到 Whale</p>
     </div>
     {{if $list}}
-    <ul>
+    <ul class="app-list">
         {{foreach $list as $short => $app}}
         <li><a href="/{{$short}}/">{{$app.name}}</a></li>
         {{/foreach}}
