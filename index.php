@@ -242,6 +242,7 @@ switch (ENVIRONMENT)
     } else {
         $application_folder = Whale::getAppDir();
         define('WHALE_PATH', Whale::getOwnPath());
+        define('APPNAME', Whale::getApp());
     }
 
     // The path to the "application" directory

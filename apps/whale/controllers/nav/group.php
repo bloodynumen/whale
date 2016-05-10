@@ -16,19 +16,19 @@ class Group extends CI_Controller {
             if ($this->nav->add_group($app, $name)) {
                 return output_json(array(
                     'errno' => 0,
-                    'message' => '添加成功',
+                    'msg' => '添加成功',
                 ));
             } else {
                 return output_json(array(
                     'errno' => 1,
-                    'message' => '添加失败',
+                    'msg' => '添加失败',
                 ));
             }
         } else {
             $result['error_msg'] = validation_errors();
             return output_json(array(
                 'errno' => 1,
-                'message' => validation_errors(),
+                'msg' => validation_errors(),
             ));
         }
     }
@@ -41,19 +41,19 @@ class Group extends CI_Controller {
             if ($this->nav->edit_group($id, $name)) {
                 return output_json(array(
                     'errno' => 0,
-                    'message' => '修改成功',
+                    'msg' => '修改成功',
                 ));
             } else {
                 return output_json(array(
                     'errno' => 1,
-                    'message' => '修改失败',
+                    'msg' => '修改失败',
                 ));
             }
         } else {
             $result['error_msg'] = validation_errors();
             return output_json(array(
                 'errno' => 1,
-                'message' => validation_errors(),
+                'msg' => validation_errors(),
             ));
         }
     }
@@ -65,19 +65,19 @@ class Group extends CI_Controller {
             if ($this->nav->del_group($id)) {
                 return output_json(array(
                     'errno' => 0,
-                    'message' => '删除成功',
+                    'msg' => '删除成功',
                 ));
             } else {
                 return output_json(array(
                     'errno' => 1,
-                    'message' => '删除失败',
+                    'msg' => '删除失败',
                 ));
             }
         } else {
             $result['error_msg'] = validation_errors();
             return output_json(array(
                 'errno' => 1,
-                'message' => validation_errors(),
+                'msg' => validation_errors(),
             ));
         }
     }

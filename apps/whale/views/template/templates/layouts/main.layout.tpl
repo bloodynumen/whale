@@ -14,7 +14,7 @@
     </head>
 
     <body>
-        <div id="wrapper">
+        <div id="page-wrapper">
             {{block name="nav"}}
             <nav class="navbar navbar-default navbar-fixed-top" role="navigation" style="margin-bottom: 0">
                 <div class="navbar-header">
@@ -96,12 +96,6 @@
 
             {{block name="footer"}}
             <div id="footer">
-                <div class="container-fluid">
-                    <p class="text-center">
-                        <span class="label label-info">程序耗时:</span>
-                        <strong class="sec">秒</strong>
-                    </p>
-                </div>
             </div>
             <script src="/whale/static/js/require.min.js"></script>
             <script src="/whale/static/js/require.init.js?v=1"></script>

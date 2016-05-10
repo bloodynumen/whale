@@ -83,3 +83,14 @@ defined('EXIT_USER_INPUT')     OR define('EXIT_USER_INPUT', 7); // invalid user 
 defined('EXIT_DATABASE')       OR define('EXIT_DATABASE', 8); // database error
 defined('EXIT__AUTO_MIN')      OR define('EXIT__AUTO_MIN', 9); // lowest automatically-assigned error code
 defined('EXIT__AUTO_MAX')      OR define('EXIT__AUTO_MAX', 125); // highest automatically-assigned error code
+
+//用户类别 注意数字越大 代表权限越高
+define('USER_MP_ADMIN', 3001);
+define('USER_APP_ADMIN', 2001);
+define('USER_NORMAL', 1001);
+
+//基础错误信息
+define('SUCCESS', 22000);//操作成功
+define('FAILED', 22001);//操作失败
+define('SYSTERM_ERROR', 22003);//系统错误
+define('PARAM_ERROR', 22005);//参数错误

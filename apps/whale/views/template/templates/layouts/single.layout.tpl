@@ -3,7 +3,7 @@
     <head>
         {{block name="head"}}
         <meta charset="utf-8"/>
-        <title>{{$_common.page.site}}-{{block name="title"}}{{/block}}</title>
+        <title>{{if isset($_common.page.site)}}{{$_common.page.site}}-{{/if}}{{block name="title"}}{{/block}}</title>
         <link rel="shortcut icon" href="/whale/static/images/favicon.ico"/>
         <link rel="stylesheet" href="/whale/static/css/bootstrap.min.css" />
         <link rel="stylesheet" href="/whale/static/css/font-awesome.css" />

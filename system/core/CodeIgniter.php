@@ -69,6 +69,14 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	require_once(APPPATH.'config/constants.php');
 
+// Whale constant
+	if (file_exists(WHALE_PATH.'config/'.ENVIRONMENT.'/constants.php'))
+	{
+		require_once(WHALE_PATH.'config/'.ENVIRONMENT.'/constants.php');
+	}
+
+	require_once(WHALE_PATH.'config/constants.php');
+
 /*
  * ------------------------------------------------------
  *  Load the global functions

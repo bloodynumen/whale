@@ -1,4 +1,5 @@
 requirejs.config({
+    urlArgs: '_version=3',
     baseUrl: '/whale/static/js/',
     paths: {
         jquery: 'jquery.min',
@@ -10,7 +11,7 @@ requirejs.config({
         jqueryui: 'jquery-ui-1.9.2.custom.min',
         jqueryuiLocal: 'jquery-ui-localize',
         jqueryform: 'jquery.form.min',
-        mis: 'modules/mis-v2.min'
+        whale: 'modules/whale'
     },
     shim: {
         bootstrap: {
@@ -37,9 +38,9 @@ requirejs.config({
         jqueryform: {
             deps: ['jquery']
         },
-        mis: {
+        whale: {
             deps: ['jquery', 'bootstrap']
         }
     }
 });
-require(['jquery', 'bootstrap', 'metisMenu', 'sbadmin', 'jqueryui', 'mis']);
+require(['jquery', 'bootstrap', 'metisMenu', 'sbadmin', 'jqueryui', 'whale']);

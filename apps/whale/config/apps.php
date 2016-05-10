@@ -1,13 +1,13 @@
 <?php
 $config['apps'] = array(
     'list' => array(
-        'test' => array(
-            'name' => 'app1',
-            'desc' => '测试用',
-        ),
         'juhe' => array(
-            'name' => 'app2',
+            'name' => 'juhe',
             'desc' => '聚合',
+        ),
+        'test' => array(
+            'name' => 'test',
+            'desc' => '测试用',
         ),
         'whale' => array(
             'name' => 'app3',

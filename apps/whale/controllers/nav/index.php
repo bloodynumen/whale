@@ -1,20 +1,29 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Index extends MY_Admin_Controller {
+class Index extends WhaleController {
+
+    var $allow_list = array(
+        USER_APP_ADMIN,
+        USER_MP_ADMIN,
+    );
 
     public function __construct() {
         parent::__construct();
         //权限校验
-        $this->load->library('nav');
+        //用户对应的权限校验
+        if (!$this->userPower->auth_user_type($this->allow_list)) {
+            $this->load->helper('url');
+            redirect('/whale', 'refresh');
+            exit();
+        }
     }
 
     public function index() {
         $app = trim($this->input->get('app'));
         $nav_list = $this->nav->get_user_nav($app);
 
-        $this->smarty->assign('nav_list', $nav_list);
-        $this->smarty->with_common_data = true;
-        $this->smarty->base_view('nav/index.tpl');
+        $this->template->assign('nav_list', $nav_list);
+        $this->template->display('nav/index.tpl');
     }
 
 }

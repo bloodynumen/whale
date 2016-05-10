@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Channel extends CI_Controller {
+class Channel extends WhaleController {
 
     public function __construct() {
         parent::__construct();
@@ -20,19 +20,19 @@ class Channel extends CI_Controller {
             if ($this->nav->add_channel($id, $name, $link)) {
                 return output_json(array(
                     'errno' => 0,
-                    'message' => '添加成功',
+                    'msg' => '操作成功',
                 ));
             } else {
                 return output_json(array(
                     'errno' => 1,
-                    'message' => '添加失败',
+                    'msg' => '操作失败',
                 ));
             }
         } else {
             $result['error_msg'] = validation_errors();
             return output_json(array(
                 'errno' => 1,
-                'message' => validation_errors(),
+                'msg' => validation_errors(),
             ));
         }
     }
@@ -50,19 +50,19 @@ class Channel extends CI_Controller {
             if ($this->nav->edit_channel($id, $channel_id, $name, $link)) {
                 return output_json(array(
                     'errno' => 0,
-                    'message' => '修改成功',
+                    'msg' => '操作成功',
                 ));
             } else {
                 return output_json(array(
                     'errno' => 1,
-                    'message' => '修改失败',
+                    'msg' => '操作失败',
                 ));
             }
         } else {
             $result['error_msg'] = validation_errors();
             return output_json(array(
                 'errno' => 1,
-                'message' => validation_errors(),
+                'msg' => validation_errors(),
             ));
         }
     }
@@ -75,19 +75,19 @@ class Channel extends CI_Controller {
             if ($this->nav->del_channel($id, $channel_id)) {
                 return output_json(array(
                     'errno' => 0,
-                    'message' => '删除成功',
+                    'msg' => '删除成功',
                 ));
             } else {
                 return output_json(array(
                     'errno' => 1,
-                    'message' => '删除失败',
+                    'msg' => '删除失败',
                 ));
             }
         } else {
             $result['error_msg'] = validation_errors();
             return output_json(array(
                 'errno' => 1,
-                'message' => validation_errors(),
+                'msg' => validation_errors(),
             ));
         }
     }
